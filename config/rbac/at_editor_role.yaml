@@ -1,0 +1,27 @@
+# permissions for end users to edit ats.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterscan
+    app.kubernetes.io/managed-by: kustomize
+  name: at-editor-role
+rules:
+- apiGroups:
+  - cnat.vinish.dev
+  resources:
+  - ats
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cnat.vinish.dev
+  resources:
+  - ats/status
+  verbs:
+  - get

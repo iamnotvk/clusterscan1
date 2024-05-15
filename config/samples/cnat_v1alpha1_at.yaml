@@ -1,0 +1,11 @@
+apiVersion: cnat.vinish.dev/v1alpha1
+kind: At
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterscan
+    app.kubernetes.io/managed-by: kustomize
+  name: at-sample
+spec:
+  schedule: "2024-05-14T10:12:00Z"
+  command: "echo hello world!"
+  # TODO(user): Add fields here
